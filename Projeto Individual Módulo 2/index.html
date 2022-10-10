@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codifique sua mensagem!</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header>
+        <!-- Título que aparece na página -->
+        <h1 class="titulo">Codificador de textos</h1> <br><br>
+    </header>
+    <!-- Divisor para a tela de criptografar-->
+        <main>
+          <!-- Área com o resultado -->
+           <aside>
+            <div>
+				<textarea class="textoSaida" id="textoSaida" readonly cols="30" rows="30" placeholder=" Digite uma mensagem e selecione o algoritmo de sua preferência para ser codificado ou decodificado!"></textarea>
+        <!-- Botão para copiar o conteúdo para a área de trabalho -->
+			<div class="botaoCopia" id="areaBotao"></div>
+
+			</div>
+           </aside>
+
+            <form action="#">
+              <!-- Área para escrever o texto -->
+                <textarea name="mensagem" id="mensagem" cols="60" rows="20"
+                    placeholder=" Digite sua mensagem aqui"></textarea> <br><br>
+                <!-- Área para selecionar o tipo de criptografia -->
+                <label id="selecione" for="select"></label>
+                <select name="select" class="select" id="select">
+                    <option value="selecione" disabled selected>Selecione</option>
+                    <option value="base64">Base64</option>
+                    <option value="cifra">Cifra de césar</option>
+                </select> <br><br>
+                <div class="chave-container">
+                    <div class="slider-range">
+                      <label class="chave" for="rangenumber">Chave</label>
+                        <input type="number" value="1" id="rangenumber" min="1" max="26"/> <br><br>
+                    </div>
+                </div>
+				<!-- Área para os botões -->
+                <div class="radio-button">
+                    <div class="radio">
+                        <input type="radio" name="codificar" id="codificar" value="codificar" checked />
+                        <label for="codificar">Codificar</label>
+                        <input type="radio" name="codificar" id="decodificar" value="decodificar" />
+                        <label for="decodificar">Decodificar</label> <br><br>
+                    </div>
+                </div>
+                <div id="botao">
+                    <button>Codificar Mensagem!</button>
+                </div>
+
+        </main>
+
+<footer>
+  <!-- Área para dados pessoais no rodapé -->
+  <h4><a href="https://github.com/gabrielxvnx/"> Gabriel Vinícius 2022 </a></h4>
+</footer>
+
+<script src="/script.js"></script>
+</body>
+</html>
